@@ -1,0 +1,39 @@
+<div class="cell example example3" id="example-3">
+  <form #checkout="ngForm" (ngSubmit)="onSubmit(checkout)" class="checkout">
+    <ion-row text-center class="card-info">
+        <h4 style="margin:auto;" for="card-info">Card Info</h4>
+    </ion-row>
+  <ion-row class="card-details">
+    <ion-col col-6 col-md-6>
+        <input id="name" name="name" [(ngModel)]="user.name" placeholder="Name" #name="ngModel" required>
+      <div *ngIf="name.invalid && (name.dirty || name.touched) || submitted"
+        class="alert">
+
+          <div *ngIf="name.errors?.required">
+            Name is required.
+          </div>
+      </div>
+    </ion-col>
+    <ion-col  col-6 col-md-6>
+        <input id="email" name="email" type="email" [(ngModel)]="user.email" #email="ngModel" placeholder="email" required>
+        <div *ngIf="email.invalid && (email.dirty || email.touched) || checkout.submitted"
+        class="alert">
+
+          <div *ngIf="email.errors?.required ">
+            email is required.
+          </div>
+          <div *ngIf="email.errors?.email">
+              Provide a valid email.
+            </div>
+      </div>
+    </ion-col>
+  </ion-row>
+    <div class="form-row">
+      <div id="card-info" #cardInfo></div>
+  
+      <div id="card-errors" role="alert" *ngIf="error">{{ error }}</div>
+    </div>
+  
+    <button type="submit">Pay $ 6.5</button> 
+    <button (click)="closePopover()" type="button">Cancel</button>
+  </form>

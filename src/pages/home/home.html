@@ -1,14 +1,70 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Xerox Test Chat application
     </ion-title>
+    <!-- <ion-buttons end>
+      <button ion-button icon-only (click)="exitChat()">
+        <ion-icon name="exit"></ion-icon>
+      </button>
+    </ion-buttons> -->
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content>
+  <ion-list>
+    <!-- <ion-item *ngFor="let chat of chats" no-lines>
+        <div class="chat-message" text-right *ngIf="chat.uniqueId === chatCollection.uniqueId">
+          <div class="right-bubble">
+            <span class="msg-name">{{chat.nickname}}</span>
+            <p text-wrap>{{chat.message}}</p>
+            <span class="msg-date" item-start>{{chat.sendDate | date:'short'}}</span>
+          </div>
+        </div>
+        <div class="chat-message" text-left *ngIf="chat.uniqueId != chatCollection.uniqueId">
+          <div class="left-bubble">
+            <span class="msg-name">{{chat.nickname}}</span>
+            <span class="msg-date">{{chat?.sendDate | date:'short'}}</span>
+            <p text-wrap>{{chat.message}}</p>
+          </div>
+        </div>
+    </ion-item> -->
+  </ion-list>
+    <ion-list>
+      <ion-item>
+        <ion-avatar item-start>
+          <img src="assets/imgs/paste.jpg">
+        </ion-avatar>
+        <h2>Colgate Toothpase</h2>
+        <p>$ 2 </p><pre>Count : 2</pre>
+        <pre>Total : $ 4</pre>
+        <pre *ngIf="paymentStatus">Status : Processed</pre>
+      </ion-item>
+      <ion-item>
+        <ion-avatar item-start>
+          <img src="assets/imgs/DOVE.jpg">
+        </ion-avatar>
+        <h2>Dove Cream Beauty Bathing Bar </h2>
+        <p>$ 0.5 </p><pre>Count : 5</pre>
+        <pre>Total : $ 2.5</pre>
+        <pre *ngIf="paymentStatus">Status : Processed</pre>
+      </ion-item>
+    </ion-list>
 </ion-content>
+
+<ion-footer (click)="presentPopover()">
+  <!-- <ion-grid>
+    <ion-row>
+      <ion-col col-10>
+        <ion-input type="text" placeholder="Type a message" (ionFocus)="checkFocus()" [(ngModel)]="chatCollection.message" name="message"></ion-input>
+      </ion-col>
+      <ion-col col-2 (click)="sendMessage(chatCollection.message)">
+        <ion-icon name="paper-plane"></ion-icon>
+      </ion-col>
+    </ion-row>
+  </ion-grid> -->
+
+  <ion-toolbar color="danger">
+    <ion-title text-center>Pay Now</ion-title>
+  </ion-toolbar>
+</ion-footer>

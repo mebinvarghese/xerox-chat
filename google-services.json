@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "859643036077",
+    "firebase_url": "https://task-f0f22.firebaseio.com",
+    "project_id": "task-f0f22",
+    "storage_bucket": "task-f0f22.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:859643036077:android:a2ac36045953a765",
+        "android_client_info": {
+          "package_name": "com.xerox.xoomcart"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "859643036077-2jpbdradtkdqtst294vna9f1f9uk637h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDl-foRm17bTKdVxrWueBu09NopjDGJzrw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
